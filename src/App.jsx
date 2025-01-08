@@ -9,30 +9,31 @@ import Title from "./components/Title";
 //{/* <h1 className="testeStyle">Gerenciador de Tarefas</h1> */}
 
 function App() {
-    const [tasks, setTasks] = useState([
-        {
-            id: 1,
-            title: "estudar prog",
-            description: "estudar react",
-            isCompleted: false,
-        },
-        {
-            id: 2,
-            title: "estudar mat",
-            description: "estudar matemática",
-            isCompleted: false,
-        },
-        {
-            id: 3,
-            title: "estudar ia",
-            description: "estudar inteligência artificial",
-            isCompleted: false,
-        },
-    ]);
-    // const [tasks, setTasks] = useState(
-    //     JSON.parse(localStorage.getItem("tasks") || [])
-    // );
-    console.log("##", tasks);
+    // const [tasks, setTasks] = useState([
+    //     {
+    //         id: 1,
+    //         title: "estudar prog",
+    //         description: "estudar react",
+    //         isCompleted: false,
+    //     },
+    //     {
+    //         id: 2,
+    //         title: "estudar mat",
+    //         description: "estudar matemática",
+    //         isCompleted: false,
+    //     },
+    //     {
+    //         id: 3,
+    //         title: "estudar ia",
+    //         description: "estudar inteligência artificial",
+    //         isCompleted: false,
+    //     },
+    // ]);
+    const [tasks, setTasks] = useState(
+        JSON.parse(localStorage.getItem("tasks") || "[]")
+    );
+
+    // console.log("##", tasks);
     // useEffect(() => {
     //     console.log("TASKS ALTERADAS");
     // }, [tasks]);
@@ -40,9 +41,10 @@ function App() {
     // que alguma variável é alterada a função passada é executada
     // a lista pode ser VAZIA [], isso faz a função ser executada apenas uma vez, no carregamento do componente
 
-    // useEffect(() => {
-    //     localStorage.setItem("tasks", JSON.stringify(tasks));
-    // }, [tasks]); // useEffect recebe uma função e uma lista de variáveis, toda vez que alguma variável é alterada a função passada é executada
+    useEffect(() => {
+        // console.log("##", localStorage.getItem("tasks"));
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]); // useEffect recebe uma função e uma lista de variáveis, toda vez que alguma variável é alterada a função passada é executada
 
     //CHAMANDO UMA API PRA ALIMENTAR AS TAREFAS
     // useEffect(() => {
