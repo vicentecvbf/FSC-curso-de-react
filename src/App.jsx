@@ -40,9 +40,9 @@ function App() {
     // que alguma variável é alterada a função passada é executada
     // a lista pode ser VAZIA [], isso faz a função ser executada apenas uma vez, no carregamento do componente
 
-    useEffect(() => {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-    }, [tasks]); // useEffect recebe uma função e uma lista de variáveis, toda vez que alguma variável é alterada a função passada é executada
+    // useEffect(() => {
+    //     localStorage.setItem("tasks", JSON.stringify(tasks));
+    // }, [tasks]); // useEffect recebe uma função e uma lista de variáveis, toda vez que alguma variável é alterada a função passada é executada
 
     //CHAMANDO UMA API PRA ALIMENTAR AS TAREFAS
     // useEffect(() => {
