@@ -9,30 +9,30 @@ import Title from "./components/Title";
 //{/* <h1 className="testeStyle">Gerenciador de Tarefas</h1> */}
 
 function App() {
-    // const [tasks, setTasks] = useState([
-    //     {
-    //         id: 1,
-    //         title: "estudar prog",
-    //         description: "estudar react",
-    //         isCompleted: false,
-    //     },
-    //     {
-    //         id: 2,
-    //         title: "estudar mat",
-    //         description: "estudar matemática",
-    //         isCompleted: false,
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "estudar ia",
-    //         description: "estudar inteligência artificial",
-    //         isCompleted: false,
-    //     },
-    // ]);
-    const [tasks, setTasks] = useState(
-        JSON.parse(localStorage.getItem("tasks") || [])
-    );
-
+    const [tasks, setTasks] = useState([
+        {
+            id: 1,
+            title: "estudar prog",
+            description: "estudar react",
+            isCompleted: false,
+        },
+        {
+            id: 2,
+            title: "estudar mat",
+            description: "estudar matemática",
+            isCompleted: false,
+        },
+        {
+            id: 3,
+            title: "estudar ia",
+            description: "estudar inteligência artificial",
+            isCompleted: false,
+        },
+    ]);
+    // const [tasks, setTasks] = useState(
+    //     JSON.parse(localStorage.getItem("tasks") || [])
+    // );
+    console.log("##", tasks);
     // useEffect(() => {
     //     console.log("TASKS ALTERADAS");
     // }, [tasks]);
