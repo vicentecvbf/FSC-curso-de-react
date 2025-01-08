@@ -9,7 +9,7 @@ import Button from "./Button";
 
 // function Tasks(props) { // usar o destruction
 function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
-    console.log(tasks);
+    // console.log(tasks);
     const navigate = useNavigate(); // navigate pra trocar de página
 
     function onSeeDetailsClick(task) {
